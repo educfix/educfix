@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>EDUCFIX — Empowering Minds, Transforming Futures</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="educfix.css"/>
+</head>
+<body class="lang-en">
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo"><img src="educfix-logo.png" alt="EDUCFIX"></a>
+    <div class="nav-links">
+      <a href="#about"><span class="en">About</span><span class="fr">À propos</span></a>
+      <a href="#branches"><span class="en">Branches</span><span class="fr">Branches</span></a>
+      <a href="#innovation"><span class="en">Innovation Forge</span><span class="fr">Innovation Forge</span></a>
+      <a href="#courses"><span class="en">Courses</span><span class="fr">Cours</span></a>
+      <a href="#business"><span class="en">Business</span><span class="fr">Business</span></a>
+      <a href="#fees"><span class="en">Fees</span><span class="fr">Frais</span></a>
+      <a href="#contact"><span class="en">Contact</span><span class="fr">Contact</span></a>
+    </div>
+    <div class="nav-right">
+      <button class="lang-btn active" id="btnEN" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" id="btnFR" onclick="setLang('fr')">FR</button>
+      <a href="/cdn-cgi/l/email-protection#e59184898e918a80819086838c9da58288848c89cb868a88" class="btn btn-primary" style="font-size:0.78rem;padding:8px 16px">
+        <span class="en">Get Started</span><span class="fr">Commencer</span>
+      </a>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="toggleMenu()"><span class="en">About</span><span class="fr">À propos</span></a>
+  <a href="#branches" onclick="toggleMenu()"><span class="en">Branches</span><span class="fr">Branches</span></a>
+  <a href="#innovation" onclick="toggleMenu()"><span class="en">Innovation Forge</span><span class="fr">Innovation Forge</span></a>
+  <a href="#courses" onclick="toggleMenu()"><span class="en">Courses</span><span class="fr">Cours</span></a>
+  <a href="#business" onclick="toggleMenu()"><span class="en">Business</span><span class="fr">Business</span></a>
+  <a href="#fees" onclick="toggleMenu()"><span class="en">Fees</span><span class="fr">Frais</span></a>
+  <a href="#history" onclick="toggleMenu()"><span class="en">History</span><span class="fr">Histoire</span></a>
+  <a href="#contact" onclick="toggleMenu()"><span class="en">Contact</span><span class="fr">Contact</span></a>
+  <div class="mobile-lang-row">
+    <button class="lang-btn" id="btnENm" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btnFRm" onclick="setLang('fr')">FR</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">
+        <span class="hero-dot"></span>
+        <span class="label en">Building Future Leaders</span>
+        <span class="label fr">Construire les Leaders de Demain</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="en">EDUCFIX<br/><em>Creativity</em> at Its Peak</span>
+        <span class="fr">EDUCFIX<br/><em>La Créativité</em> à Son Sommet</span>
+      </h1>
+      <p class="hero-motto">
+        <span class="en">Empowering Minds, Transforming Futures</span>
+        <span class="fr">Développer les Esprits, Transformer les Avenirs</span>
+      </p>
+      <p class="hero-desc">
+        <span class="en">An educational organization poised to build ethical, innovative, and creative leaders who are solution providers in science, arts, business, and beyond.</span>
+        <span class="fr">Une organisation éducative prête à former des leaders éthiques, innovants et créatifs, acteurs de solutions dans les domaines des sciences, des arts, des affaires et au-delà.</span>
+      </p>
+      <div class="hero-actions">
+        <button class="btn-hero-primary" onclick="document.getElementById('branches').scrollIntoView({behavior:'smooth'})">
+          <span class="en">Explore Branches ›</span><span class="fr">Explorer les Branches ›</span>
+        </button>
+        <button class="btn-hero-outline" onclick="document.getElementById('innovation').scrollIntoView({behavior:'smooth'})">
+          <span class="en">Innovation Forge</span><span class="fr">Innovation Forge</span>
+        </button>
+      </div>
+      <div class="hero-stats">
+        <div><div class="hero-stat-num">10M+</div><div class="hero-stat-label"><span class="en">Leaders to Certify</span><span class="fr">Leaders à Certifier</span></div></div>
+        <div><div class="hero-stat-num">5</div><div class="hero-stat-label"><span class="en">Major Branches</span><span class="fr">Branches Majeures</span></div></div>
+        <div><div class="hero-stat-num">3×</div><div class="hero-stat-label"><span class="en">Training Per Year</span><span class="fr">Formations par An</span></div></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card" onclick="document.getElementById('branches').scrollIntoView({behavior:'smooth'});setTimeout(()=>openModal('education'),600)">
+        <div class="hero-card-icon" style="background:rgba(240,89,35,0.2)">🎓</div>
+        <div><h4><span class="en">Education</span><span class="fr">Éducation</span></h4><p><span class="en">Primary through university</span><span class="fr">Du primaire à l'université</span></p></div>
+      </div>
+      <div class="hero-card" onclick="document.getElementById('branches').scrollIntoView({behavior:'smooth'});setTimeout(()=>openModal('forge'),600)">
+        <div class="hero-card-icon" style="background:rgba(255,255,255,0.12)">⚡</div>
+        <div><h4>Innovation Forge</h4><p>CreateHive · Mycelial Network · Millionaire Mind</p></div>
+      </div>
+      <div class="hero-card" onclick="document.getElementById('branches').scrollIntoView({behavior:'smooth'});setTimeout(()=>openModal('training'),600)">
+        <div class="hero-card-icon" style="background:rgba(240,89,35,0.15)">🤖</div>
+        <div><h4><span class="en">Training & Tech</span><span class="fr">Formation & Tech</span></h4><p><span class="en">AI, Robotics & Digital Skills</span><span class="fr">IA, Robotique & Compétences</span></p></div>
+      </div>
+      <div class="hero-card" onclick="document.getElementById('branches').scrollIntoView({behavior:'smooth'});setTimeout(()=>openModal('business'),600)">
+        <div class="hero-card-icon" style="background:rgba(240,89,35,0.2)">🏪</div>
+        <div><h4>EDUCFIX Business</h4><p><span class="en">Digital solutions for entrepreneurs</span><span class="fr">Solutions numériques pour entrepreneurs</span></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" style="background:var(--off-white)">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-logo-big">EDUCFIX</div>
+        <div class="about-tagline"><span class="en">...creativity at its peak</span><span class="fr">...la créativité à son sommet</span></div>
+        <div class="about-divider"></div>
+        <p class="en">Founded with a bold vision to transform how education works — from primary school to professional careers — EDUCFIX is more than a school. It is an ecosystem.</p>
+        <p class="fr">Fondée avec une vision audacieuse de transformer l'éducation — de l'école primaire aux carrières professionnelles — EDUCFIX est plus qu'une école. C'est un écosystème.</p>
+        <div class="values-grid" style="margin-top:22px">
+          <div class="value-chip"><strong><span class="en">Creativity</span><span class="fr">Créativité</span></strong><span><span class="en">Innovation of thought</span><span class="fr">Innovation de pensée</span></span></div>
+          <div class="value-chip"><strong><span class="en">Innovation</span><span class="fr">Innovation</span></strong><span><span class="en">New methodologies</span><span class="fr">Nouvelles méthodes</span></span></div>
+          <div class="value-chip"><strong><span class="en">Empowerment</span><span class="fr">Autonomisation</span></strong><span><span class="en">Skills for life</span><span class="fr">Compétences durables</span></span></div>
+          <div class="value-chip"><strong><span class="en">Excellence</span><span class="fr">Excellence</span></strong><span><span class="en">Highest standards</span><span class="fr">Plus hauts standards</span></span></div>
+          <div class="value-chip"><strong><span class="en">Community</span><span class="fr">Communauté</span></strong><span><span class="en">Collaborative learning</span><span class="fr">Apprentissage collectif</span></span></div>
+          <div class="value-chip"><strong><span class="en">Integrity</span><span class="fr">Intégrité</span></strong><span><span class="en">Trust & discipline</span><span class="fr">Confiance & discipline</span></span></div>
+        </div>
+      </div>
+      <div>
+        <div class="section-label"><span class="en">Who We Are</span><span class="fr">Qui Sommes-Nous</span></div>
+        <h2 class="section-title"><span class="en">Fixing Education,<br/>Building Leaders</span><span class="fr">Réparer l'Éducation,<br/>Former des Leaders</span></h2>
+        <p style="color:var(--text-muted);margin-bottom:18px;font-size:0.94rem;line-height:1.75">
+          <span class="en">EDUCFIX is dedicated to cultivating ethical, innovative, and creative leaders across various fields — through excellence in research and learning, empowering individuals to become solution providers who shape a brighter future.</span>
+          <span class="fr">EDUCFIX est dédié à la formation de leaders éthiques, innovants et créatifs dans divers domaines — par l'excellence dans la recherche et l'apprentissage, dotant les individus de compétences pour façonner un avenir meilleur.</span>
+        </p>
+        <div class="about-mission"><h4><span class="en">🎯 Vision</span><span class="fr">🎯 Vision</span></h4><p><span class="en">To become a premier educational organization renowned for excellence in teaching, learning, and research.</span><span class="fr">Devenir une organisation éducative de premier plan, reconnue pour l'excellence dans l'enseignement, l'apprentissage et la recherche.</span></p></div>
+        <div class="about-mission"><h4><span class="en">🚀 Mission</span><span class="fr">🚀 Mission</span></h4><p><span class="en">To advance knowledge through research and building of future leaders.</span><span class="fr">Faire progresser les connaissances par la recherche et la formation des leaders de demain.</span></p></div>
+        <div class="about-goal"><h4><span class="en">OUR GOAL</span><span class="fr">NOTRE OBJECTIF</span></h4><p><span class="en">To build, train, and certify <strong>10 million+ leaders</strong> in different areas of life.</span><span class="fr">Former, entraîner et certifier <strong>plus de 10 millions de leaders</strong> dans divers domaines de la vie.</span></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANCHES -->
+<section id="branches" style="background:var(--white)">
+  <div class="container">
+    <div class="center">
+      <div class="section-label"><span class="en">Our Structure</span><span class="fr">Notre Structure</span></div>
+      <h2 class="section-title"><span class="en">The Five Branches of EDUCFIX</span><span class="fr">Les Cinq Branches d'EDUCFIX</span></h2>
+      <p class="section-subtitle"><span class="en">Click any branch to learn more. Each branch works together to form a complete educational ecosystem — from foundational learning to professional deployment.</span><span class="fr">Cliquez sur une branche pour en savoir plus. Chaque branche collabore pour former un écosystème éducatif complet.</span></p>
+    </div>
+    <div class="branches-grid">
+      <div class="branch-card" onclick="openModal('education')">
+        <div class="bc-icon-wrap">🎓</div>
+        <div class="bc-title"><span class="en">Education</span><span class="fr">Éducation</span></div>
+        <div class="bc-desc"><span class="en">A blended model spanning primary school through university — physical schools for foundations, virtual environment for degrees.</span><span class="fr">Un modèle mixte allant du primaire à l'université — écoles physiques pour les fondements, environnement virtuel pour les diplômes.</span></div>
+        <div class="bc-link"><span class="en">Learn more ›</span><span class="fr">En savoir plus ›</span></div>
+      </div>
+      <div class="branch-card" onclick="openModal('forge')">
+        <div class="bc-icon-wrap">⚡</div>
+        <div class="bc-title"><span class="en">Innovation Forge Programs</span><span class="fr">Programmes Innovation Forge</span></div>
+        <div class="bc-desc"><span class="en">Three-stage skill and entrepreneurial program: CreateHive (skills), Mycelial Network (business), and Millionaire Mind — plus seminars and webinars.</span><span class="fr">Programme en trois étapes : CreateHive (compétences), Mycelial Network (affaires), et Millionaire Mind — plus des séminaires et webinaires.</span></div>
+        <div class="bc-link"><span class="en">Learn more ›</span><span class="fr">En savoir plus ›</span></div>
+      </div>
+      <div class="branch-card" onclick="openModal('training')">
+        <div class="bc-icon-wrap">🤖</div>
+        <div class="bc-title"><span class="en">Training</span><span class="fr">Formation</span></div>
+        <div class="bc-desc"><span class="en">Developing educators and leaders through specialized programs in pedagogy, leadership, and integrating AI and robotics into classrooms across Africa.</span><span class="fr">Développer les éducateurs et leaders par des programmes spécialisés en pédagogie, leadership et intégration de l'IA et de la robotique.</span></div>
+        <div class="bc-link"><span class="en">Learn more ›</span><span class="fr">En savoir plus ›</span></div>
+      </div>
+      <div class="branch-card" onclick="openModal('tech')">
+        <div class="bc-icon-wrap">💻</div>
+        <div class="bc-title"><span class="en">Computer / Tech</span><span class="fr">Informatique / Tech</span></div>
+        <div class="bc-desc"><span class="en">Digital Skills Center in Benin Republic — three tiered levels from Digital Essentials to Specialized Digital Skills, plus internal IT support training.</span><span class="fr">Centre de Compétences Numériques au Bénin — trois niveaux, des bases jusqu'aux compétences spécialisées.</span></div>
+        <div class="bc-link"><span class="en">Learn more ›</span><span class="fr">En savoir plus ›</span></div>
+      </div>
+      <div class="branch-card full-width" onclick="openModal('business')">
+        <div class="bc-icon-wrap" style="background:rgba(240,89,35,0.1)">🏪</div>
+        <div class="bc-title">EDUCFIX Business</div>
+        <div class="bc-desc"><span class="en">Helping entrepreneurs and local businesses grow online. From Google Maps and WhatsApp Business setup to logo design, advertising posters, stock management, and digital skills training — turning your shop into a modern, profitable enterprise.</span><span class="fr">Aider les entrepreneurs et commerces locaux à se développer en ligne. De Google Maps à la création de logo, affiches publicitaires, gestion de stock et compétences numériques — transformer votre boutique en entreprise moderne et rentable.</span></div>
+        <div class="bc-link"><span class="en">Explore services ›</span><span class="fr">Explorer les services ›</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INNOVATION FORGE -->
+<section id="innovation">
+  <div class="container">
+    <div class="section-label"><span class="en">Innovation Forge Programs</span><span class="fr">Programmes Innovation Forge</span></div>
+    <h2 class="section-title"><span class="en">From Skill to Success — Three Powerful Stages</span><span class="fr">De la Compétence au Succès — Trois Étapes Puissantes</span></h2>
+    <p class="section-subtitle"><span class="en">Our flagship skill acquisition program takes you from foundational skill-building all the way to entrepreneurial mastery. Completing all levels unlocks a role as teacher, staff, and partner of EDUCFIX.</span><span class="fr">Notre programme phare vous mène du développement fondamental des compétences jusqu'à la maîtrise entrepreneuriale. Compléter tous les niveaux ouvre la voie à un rôle d'enseignant et partenaire d'EDUCFIX.</span></p>
+    <div class="innov-grid">
+      <div class="innov-card" onclick="openModal('createhive')">
+        <div class="innov-num">01</div>
+        <h3>CREATEHIVE</h3>
+        <p><span class="en">The Skill Education stage. An online skill school with full academic structure — classrooms, curricula, admissions, exams, certificates. 4 months: 2 months training + 2 months mentorship.</span><span class="fr">L'étape d'éducation aux compétences. École en ligne avec structure académique complète. 4 mois : 2 mois de formation + 2 mois de mentorat.</span></p>
+        <div class="innov-tag"><span class="en">Stage 1 — Skills</span><span class="fr">Étape 1 — Compétences</span></div>
+      </div>
+      <div class="innov-card" onclick="openModal('mycelial')">
+        <div class="innov-num">02</div>
+        <h3>MYCELIAL NETWORK</h3>
+        <p><span class="en">Business Education for entrepreneurs and executives. Converts skills into profitable ventures. Fosters collaboration between students, industry, and community.</span><span class="fr">Éducation commerciale pour entrepreneurs et dirigeants. Convertit les compétences en entreprises rentables. Favorise la collaboration entre étudiants, industrie et communauté.</span></p>
+        <div class="innov-tag"><span class="en">Stage 2 — Business</span><span class="fr">Étape 2 — Affaires</span></div>
+      </div>
+      <div class="innov-card" onclick="openModal('millionaire')">
+        <div class="innov-num">03</div>
+        <h3>MILLIONAIRE MIND</h3>
+        <p><span class="en">The elite final stage. Rigorous training on turning skill and business education into real wealth. For professional-level learners with an active business.</span><span class="fr">L'étape finale d'élite. Formation rigoureuse pour transformer compétences et affaires en richesse réelle. Pour les apprenants de niveau professionnel.</span></p>
+        <div class="innov-tag"><span class="en">Stage 3 — Mastery</span><span class="fr">Étape 3 — Maîtrise</span></div>
+      </div>
+    </div>
+    <div class="innov-cycle">
+      <div class="cycle-node highlight" onclick="openModal('createhive')">CREATEHIVE<small><span class="en">Skills</span><span class="fr">Compétences</span></small></div>
+      <div class="cycle-arrow">→</div>
+      <div class="cycle-node" onclick="openModal('mycelial')">MYCELIAL NETWORK<small><span class="en">Business</span><span class="fr">Affaires</span></small></div>
+      <div class="cycle-arrow">→</div>
+      <div class="cycle-node" onclick="openModal('millionaire')">MILLIONAIRE MIND<small><span class="en">Mastery</span><span class="fr">Maîtrise</span></small></div>
+      <div class="cycle-arrow">→</div>
+      <div class="cycle-node" style="background:rgba(240,89,35,0.2);border-color:var(--orange-light)">TEACHERS TRAINING<small><span class="en">Partner & Staff</span><span class="fr">Partenaire</span></small></div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section id="courses" style="background:var(--off-white)">
+  <div class="container">
+    <div class="section-label"><span class="en">CreateHive Curriculum</span><span class="fr">Programme CreateHive</span></div>
+    <h2 class="section-title"><span class="en">Courses Available</span><span class="fr">Cours Disponibles</span></h2>
+    <p class="section-subtitle"><span class="en">Our current streamlined offering focuses on high-demand soft and technical skills — each paired to maximize learning outcomes.</span><span class="fr">Notre offre actuelle se concentre sur les compétences douces et techniques très demandées.</span></p>
+    <div class="courses-grid">
+      <div class="course-pill"><div class="course-pill-icon">🎨</div><div><h5><span class="en">Graphics Design</span><span class="fr">Design Graphique</span></h5><span><span class="en">+ Creative Thinking</span><span class="fr">+ Pensée Créative</span></span></div></div>
+      <div class="course-pill"><div class="course-pill-icon">📱</div><div><h5><span class="en">Digital Marketing</span><span class="fr">Marketing Digital</span></h5><span><span class="en">+ Social Media Management</span><span class="fr">+ Réseaux Sociaux</span></span></div></div>
+      <div class="course-pill"><div class="course-pill-icon">🎤</div><div><h5><span class="en">Public Speaking</span><span class="fr">Prise de Parole</span></h5><span><span class="en">+ Content Creation</span><span class="fr">+ Création de Contenu</span></span></div></div>
+      <div class="course-pill"><div class="course-pill-icon">💻</div><div><h5><span class="en">Programming</span><span class="fr">Programmation</span></h5><span><span class="en">+ Analytical Thinking</span><span class="fr">+ Pensée Analytique</span></span></div></div>
+      <div class="course-pill"><div class="course-pill-icon">📊</div><div><h5><span class="en">Marketing & Sales</span><span class="fr">Marketing & Ventes</span></h5><span><span class="en">+ Basic Computer Skills</span><span class="fr">+ Informatique de Base</span></span></div></div>
+      <div class="course-pill"><div class="course-pill-icon">👑</div><div><h5><span class="en">Leadership</span><span class="fr">Leadership</span></h5><span><span class="en">+ Negotiation & Conflict Resolution</span><span class="fr">+ Négociation</span></span></div></div>
+    </div>
+    <div class="courses-note">
+      <div style="font-size:1.4rem">💡</div>
+      <p><strong><span class="en">Training format:</span><span class="fr">Format :</span></strong> <span class="en">Telegram platform · Min. 1h30 lectures · 3 days/week · Theory, practical & application · 3 intakes/year · Professional volunteer trainers</span><span class="fr">Plateforme Telegram · Min. 1h30 de cours · 3 jours/semaine · Théorie, pratique & application · 3 rentrées/an · Formateurs bénévoles professionnels</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" style="background:var(--white)">
+  <div class="container">
+    <div class="section-label"><span class="en">The Process</span><span class="fr">Le Processus</span></div>
+    <h2 class="section-title"><span class="en">How CreateHive Works</span><span class="fr">Comment Fonctionne CreateHive</span></h2>
+    <div class="how-grid">
+      <div class="how-steps">
+        <div class="how-step"><div class="how-step-num">1</div><div><h4><span class="en">Register</span><span class="fr">S'inscrire</span></h4><p><span class="en">Complete registration via Google Form. Select your course track and receive your admission letter with a unique matriculation number.</span><span class="fr">Complétez l'inscription via Google Form. Choisissez votre filière et recevez votre lettre d'admission avec un numéro de matricule unique.</span></p></div></div>
+        <div class="how-step"><div class="how-step-num">2</div><div><h4><span class="en">Orientation</span><span class="fr">Orientation</span></h4><p><span class="en">Attend the mandatory seminar and orientation on Telegram before any classes begin.</span><span class="fr">Participez au séminaire obligatoire et à l'orientation sur Telegram avant le début des cours.</span></p></div></div>
+        <div class="how-step"><div class="how-step-num">3</div><div><h4><span class="en">Learn & Practice</span><span class="fr">Apprendre & Pratiquer</span></h4><p><span class="en">Attend live lectures covering theory, practical, and application. Complete assignments and sit for exams.</span><span class="fr">Participez à des cours en direct couvrant théorie, pratique et application. Réalisez des devoirs et passez des examens.</span></p></div></div>
+        <div class="how-step"><div class="how-step-num">4</div><div><h4><span class="en">Mentorship & Certificate</span><span class="fr">Mentorat & Certificat</span></h4><p><span class="en">2 months of hands-on mentorship. Top performers earn scholarships. All graduates receive a recognized certificate.</span><span class="fr">2 mois de mentorat pratique. Les meilleurs reçoivent des bourses. Tous les diplômés obtiennent un certificat reconnu.</span></p></div></div>
+      </div>
+      <div>
+        <div class="info-block"><h4><span class="en">What's Included</span><span class="fr">Ce qui est Inclus</span></h4><ul><li><span class="en">Admission letter & matriculation number</span><span class="fr">Lettre d'admission & numéro de matricule</span></li><li><span class="en">Curriculum, materials & assignments</span><span class="fr">Programme, matériaux & devoirs</span></li><li><span class="en">Exams & official certificate</span><span class="fr">Examens & certificat officiel</span></li><li><span class="en">Telegram community group access</span><span class="fr">Accès au groupe communautaire Telegram</span></li><li><span class="en">2 months of mentorship</span><span class="fr">2 mois de mentorat</span></li><li><span class="en">Scholarship opportunities for top students</span><span class="fr">Bourses pour les meilleurs étudiants</span></li></ul></div>
+        <div class="training-cycle"><h4><span class="en">Training Cycle (Per Year)</span><span class="fr">Cycle de Formation (Par An)</span></h4><div class="cycle-phases"><div class="cycle-phase"><strong><span class="en">Training</span><span class="fr">Formation</span></strong><small>2 <span class="en">months</span><span class="fr">mois</span></small></div><div class="cycle-phase"><strong><span class="en">Ads</span><span class="fr">Pub</span></strong><small>1 <span class="en">month</span><span class="fr">mois</span></small></div><div class="cycle-phase"><strong><span class="en">Mentorship</span><span class="fr">Mentorat</span></strong><small>1 <span class="en">month</span><span class="fr">mois</span></small></div></div></div>
+        <div class="info-block" style="margin-top:14px"><h4><span class="en">Benefits of Completing</span><span class="fr">Avantages de la Complétion</span></h4><ul><li><span class="en">Scholarship for committed trainees</span><span class="fr">Bourse pour les stagiaires engagés</span></li><li><span class="en">Opportunity to join the Millionaire Group</span><span class="fr">Opportunité de rejoindre le Millionaire Group</span></li><li><span class="en">Continuous learning post-training</span><span class="fr">Apprentissage continu post-formation</span></li><li><span class="en">Become a future EDUCFIX trainer & partner</span><span class="fr">Devenir formateur & partenaire EDUCFIX</span></li></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEES -->
+<section id="fees" style="background:var(--off-white)">
+  <div class="container">
+    <div class="center">
+      <div class="section-label"><span class="en">Pricing</span><span class="fr">Tarification</span></div>
+      <h2 class="section-title"><span class="en">Fee Structure</span><span class="fr">Structure des Frais</span></h2>
+      <p class="section-subtitle"><span class="en">Affordable, transparent pricing across all stages. Installment payments available from Stage 2. CreateHive school fees are FREE.</span><span class="fr">Tarification abordable et transparente. Paiements échelonnés disponibles à partir du Niveau 2. Frais scolaires CreateHive GRATUITS.</span></p>
+    </div>
+    <div class="fees-grid">
+      <div class="fee-card">
+        <div class="fee-card-badge"><span class="en">Stage 1</span><span class="fr">Étape 1</span></div>
+        <div class="fee-card-title">CREATEHIVE</div>
+        <div class="fee-card-subtitle"><span class="en">Skills Education — School fees FREE</span><span class="fr">Compétences — Frais scolaires GRATUITS</span></div>
+        <div class="fee-card-price">₦6,000</div>
+        <div class="fee-items">
+          <div class="fee-item"><span><span class="en">Registration</span><span class="fr">Inscription</span></span><span>₦1,000</span></div>
+          <div class="fee-item"><span><span class="en">Admission</span><span class="fr">Admission</span></span><span>₦1,000</span></div>
+          <div class="fee-item"><span><span class="en">Materials</span><span class="fr">Matériaux</span></span><span>₦1,500</span></div>
+          <div class="fee-item"><span><span class="en">Examination</span><span class="fr">Examen</span></span><span>₦500</span></div>
+          <div class="fee-item"><span><span class="en">Certificate</span><span class="fr">Certificat</span></span><span>₦2,000</span></div>
+          <div class="fee-item"><span><strong>TOTAL</strong></span><span>₦6,000</span></div>
+        </div>
+      </div>
+      <div class="fee-card featured">
+        <div class="fee-card-badge"><span class="en">Stage 2</span><span class="fr">Étape 2</span></div>
+        <div class="fee-card-title">MYCELIAL NETWORK</div>
+        <div class="fee-card-subtitle"><span class="en">Business Education — Installments available</span><span class="fr">Éducation Commerciale — Paiements échelonnés</span></div>
+        <div class="fee-card-price">₦30,000</div>
+        <div class="fee-items">
+          <div class="fee-item"><span><span class="en">School Fees</span><span class="fr">Frais Scolaires</span></span><span>₦15,000</span></div>
+          <div class="fee-item"><span><span class="en">Registration</span><span class="fr">Inscription</span></span><span>₦2,000</span></div>
+          <div class="fee-item"><span><span class="en">Admission + ID</span><span class="fr">Admission + Carte</span></span><span>₦3,000</span></div>
+          <div class="fee-item"><span><span class="en">Materials + Project</span><span class="fr">Matériaux + Projet</span></span><span>₦5,000</span></div>
+          <div class="fee-item"><span><span class="en">Certificate</span><span class="fr">Certificat</span></span><span>₦5,000</span></div>
+          <div class="fee-item"><span><strong>TOTAL</strong></span><span>₦30,000</span></div>
+        </div>
+      </div>
+      <div class="fee-card">
+        <div class="fee-card-badge"><span class="en">Stage 3</span><span class="fr">Étape 3</span></div>
+        <div class="fee-card-title">MILLIONAIRE MIND</div>
+        <div class="fee-card-subtitle"><span class="en">Advanced Mastery — Professional level</span><span class="fr">Maîtrise Avancée — Niveau professionnel</span></div>
+        <div class="fee-card-price">₦100,000</div>
+        <div class="fee-items">
+          <div class="fee-item"><span><span class="en">Full breakdown in admission letter</span><span class="fr">Détail dans la lettre d'admission</span></span><span>—</span></div>
+          <div class="fee-item"><span><strong>TOTAL</strong></span><span>₦100,000</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="fee-note"><strong><span class="en">Note:</span><span class="fr">Note :</span></strong> <span class="en">Coding/Programming tracks have higher fees due to intensive material requirements. Full breakdowns are in your admission letter. Installment plans available from Stage 2. Top students are eligible for scholarship selection.</span><span class="fr">Les filières Coding/Programmation ont des frais plus élevés. Les détails complets sont dans votre lettre d'admission. Plans de paiement échelonné disponibles à partir du Niveau 2. Les meilleurs étudiants sont éligibles aux bourses.</span></div>
+  </div>
+</section>
+
+<!-- EDUCFIX BUSINESS -->
+<section id="business" style="background:var(--off-white)">
+  <div class="container">
+    <div class="section-label" style="background:rgba(240,89,35,0.12);color:var(--orange)"><span class="en">Branch 5</span><span class="fr">Branche 5</span></div>
+    <h2 class="section-title">EDUCFIX Business</h2>
+    <p class="section-subtitle"><span class="en">Transforming local businesses into modern, profitable, digitally-powered enterprises. Practical, affordable digital solutions for entrepreneurs in Benin Republic and beyond.</span><span class="fr">Transformer les commerces locaux en entreprises modernes, rentables et numériquement puissantes. Solutions numériques pratiques et abordables pour les entrepreneurs au Bénin et au-delà.</span></p>
+
+    <div style="background:var(--purple);border-radius:var(--radius-lg);padding:32px 36px;margin-bottom:36px;display:flex;align-items:center;flex-wrap:wrap;gap:20px">
+      <div>
+        <div style="font-family:var(--font-head);font-size:clamp(1.3rem,3vw,2rem);font-weight:700;color:var(--white);line-height:1.2">
+          <span class="en">BOOST YOUR BUSINESS<br/><em style="color:var(--orange);font-style:normal">WITH EDUCFIX</em></span>
+          <span class="fr">BOOSTEZ VOTRE COMMERCE<br/><em style="color:var(--orange);font-style:normal">AVEC EDUCFIX</em></span>
+        </div>
+        
+      </div>
+      
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px">
+      <div class="biz-pack">
+        <div class="biz-pack-header">
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <span class="biz-pack-name">Pack Visibilité</span>
+            <span class="biz-promo-badge">PROMO</span>
+          </div>
+          <div style="display:flex;align-items:baseline;gap:10px;margin-top:6px">
+            <span class="biz-pack-price">5.000 FCFA</span>
+            <span class="biz-pack-old">10.000 FCFA</span>
+          </div>
+        </div>
+        <div class="biz-pack-body">
+          <div class="biz-item"><div class="biz-item-icon">📍</div><div><h5><span class="en">Google Maps Installation</span><span class="fr">Installation Google Maps</span></h5><p><span class="en">Get your shop listed and found on Google Maps instantly</span><span class="fr">Faites référencer votre boutique sur Google Maps instantanément</span></p></div></div>
+          <div class="biz-item"><div class="biz-item-icon">💬</div><div><h5>WhatsApp Business + Catalogue</h5><p><span class="en">Professional setup with a full product catalogue</span><span class="fr">Configuration professionnelle avec catalogue produits complet</span></p></div></div>
+          <div class="biz-result"><span class="en">Result: Clients find you in one click.</span><span class="fr">Résultat : Les clients vous trouvent en un clic.</span></div>
+        </div>
+      </div>
+
+      <div class="biz-pack">
+        <div class="biz-pack-header">
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <span class="biz-pack-name">Pack Design Professionnel</span>
+            <span class="biz-promo-badge">PROMO</span>
+          </div>
+          <div style="font-size:0.82rem;color:rgba(255,255,255,0.55);margin-top:6px"><span class="en">Professional image — more VIP clients</span><span class="fr">Image professionnelle — plus de clients VIP</span></div>
+        </div>
+        <div class="biz-pack-body">
+          <div class="biz-item"><div class="biz-item-icon">🎨</div><div><h5><span class="en">Logo Creation</span><span class="fr">Création de Logo</span></h5><p><span style="font-family:var(--font-head);color:var(--orange)">10.000 FCFA</span> <span style="text-decoration:line-through;font-size:0.78rem;color:var(--text-muted)">20.000 FCFA</span></p></div></div>
+          <div class="biz-item"><div class="biz-item-icon">📢</div><div><h5><span class="en">5 Advertising Posters / month</span><span class="fr">5 Affiches Publicitaires / mois</span></h5><p><span style="font-family:var(--font-head);color:var(--orange)">12.000 FCFA/mois</span> <span style="text-decoration:line-through;font-size:0.78rem;color:var(--text-muted)">24.000 FCFA/mois</span></p></div></div>
+          <div class="biz-result"><span class="en">Result: A brand image that attracts VIP clients.</span><span class="fr">Résultat : Une image de marque qui attire les clients VIP.</span></div>
+        </div>
+      </div>
+
+      <div class="biz-pack">
+        <div class="biz-pack-header">
+          <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px">
+            <span class="biz-pack-name"><span class="en">Stock Management & Digitalisation</span><span class="fr">Gestion de Stock & Digitalisation</span></span>
+          </div>
+          <div style="font-family:var(--font-head);font-size:1.2rem;font-weight:700;color:var(--orange);margin-top:6px"><span class="en">From 25.000 FCFA</span><span class="fr">À partir de 25.000 FCFA</span></div>
+        </div>
+        <div class="biz-pack-body">
+          <div class="biz-item"><div class="biz-item-icon">📊</div><div><h5><span class="en">Notebooks → Excel Files</span><span class="fr">Cahiers → Fichiers Excel</span></h5><p><span class="en">Transform hand-written accounts into clear digital spreadsheets</span><span class="fr">Transformez vos cahiers de comptes en fichiers Excel clairs</span></p></div></div>
+          <div class="biz-item"><div class="biz-item-icon">📱</div><div><h5><span class="en">Track Profits on Your Phone</span><span class="fr">Suivez vos Profits sur Téléphone</span></h5><p><span class="en">Quick training to monitor your finances from your smartphone</span><span class="fr">Formation rapide pour surveiller vos finances depuis votre smartphone</span></p></div></div>
+          <div class="biz-result"><span class="en">Result: Zero errors, more clarity.</span><span class="fr">Résultat : Zéro erreur, plus de clarté.</span></div>
+        </div>
+      </div>
+
+      <div class="biz-pack">
+        <div class="biz-pack-header">
+          <span class="biz-pack-name"><span class="en">Digital Skills for Entrepreneurs</span><span class="fr">Compétences Numériques pour Entrepreneurs</span></span>
+          <div style="font-size:0.82rem;color:rgba(255,255,255,0.55);margin-top:6px"><span class="en">Practical training built for business owners</span><span class="fr">Formation pratique conçue pour les commerçants</span></div>
+        </div>
+        <div class="biz-pack-body">
+          <div class="biz-item"><div class="biz-item-icon">📲</div><div><h5><span class="en">Social Media Management</span><span class="fr">Gestion des Réseaux Sociaux</span></h5><p><span class="en">Grow your audience and attract customers online</span><span class="fr">Développez votre audience et attirez des clients en ligne</span></p></div></div>
+          <div class="biz-item"><div class="biz-item-icon">🛒</div><div><h5><span class="en">Online Ordering & Customer Engagement</span><span class="fr">Commandes en Ligne & Engagement Client</span></h5><p><span class="en">Set up digital ordering and manage customer relationships</span><span class="fr">Configurez les commandes numériques et gérez vos relations clients</span></p></div></div>
+          <div class="biz-result"><span class="en">Result: A business that works even while you sleep.</span><span class="fr">Résultat : Une entreprise qui travaille même pendant votre sommeil.</span></div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+<!-- WHY EDUCFIX -->
+<section id="usp" style="background:var(--white)">
+  <div class="container">
+    <div class="section-label"><span class="en">Why Choose EDUCFIX</span><span class="fr">Pourquoi Choisir EDUCFIX</span></div>
+    <h2 class="section-title"><span class="en">What Sets Us Apart</span><span class="fr">Ce Qui Nous Distingue</span></h2>
+    <p class="section-subtitle"><span class="en">EDUCFIX is not just another learning platform — it is a transformative ecosystem that actively shapes your educational and professional journey from start to finish.</span><span class="fr">EDUCFIX n'est pas qu'une plateforme d'apprentissage — c'est un écosystème transformateur qui façonne activement votre parcours.</span></p>
+    <div class="usp-grid">
+      <div class="usp-card"><div class="usp-icon">🔄</div><h3><span class="en">End-to-End Educational Pipeline</span><span class="fr">Parcours Éducatif Complet</span></h3><p><span class="en">From primary education to advanced professional training — EDUCFIX spans the full educational lifecycle, building a continuous journey unlike any standard platform.</span><span class="fr">De l'éducation primaire à la formation professionnelle avancée — EDUCFIX couvre l'intégralité du cycle éducatif.</span></p></div>
+      <div class="usp-card"><div class="usp-icon">🤝</div><h3><span class="en">Talent Incubator & Placement</span><span class="fr">Incubateur de Talents & Placement</span></h3><p><span class="en">EDUCFIX doesn't just educate — it incubates, vets, and deploys talent into the marketplace with a clear, tangible path to employment.</span><span class="fr">EDUCFIX n'éduque pas seulement — il incube, évalue et déploie les talents sur le marché avec un chemin clair vers l'emploi.</span></p></div>
+      <div class="usp-card"><div class="usp-icon">💼</div><h3><span class="en">Skills + Business Acumen</span><span class="fr">Compétences + Sens des Affaires</span></h3><p><span class="en">Through Mycelial Network and Millionaire Mind, EDUCFIX builds business-savvy professionals ready for today's market — not just certificate holders.</span><span class="fr">Via Mycelial Network et Millionaire Mind, EDUCFIX forme des professionnels dotés d'un sens des affaires prêts pour le marché actuel.</span></p></div>
+      <div class="usp-card"><div class="usp-icon">🤖</div><h3><span class="en">Pioneering AI & Robotics in Education</span><span class="fr">IA & Robotique en Éducation</span></h3><p><span class="en">The Training branch prepares African educators to integrate AI, Robotics, and ICT into classrooms — positioning EDUCFIX at the forefront of educational innovation.</span><span class="fr">La branche Formation prépare les éducateurs africains à intégrer l'IA, la Robotique et les TIC dans les salles de classe.</span></p></div>
+      <div class="usp-card"><div class="usp-icon">🌐</div><h3><span class="en">Blended Online & Offline Learning</span><span class="fr">Apprentissage Mixte</span></h3><p><span class="en">Strategic combination of online platforms with onsite, hands-on training where physical presence delivers maximum impact.</span><span class="fr">Combinaison stratégique de plateformes en ligne avec une formation pratique en présentiel pour un impact maximal.</span></p></div>
+      <div class="usp-card"><div class="usp-icon">♾️</div><h3><span class="en">Self-Sustaining Ecosystem</span><span class="fr">Écosystème Autosuffisant</span></h3><p><span class="en">Graduates become trainers and partners. EDUCFIX builds its own internal talent pool — creating a robust, self-sustaining educational organization.</span><span class="fr">Les diplômés deviennent formateurs et partenaires. EDUCFIX constitue son propre vivier de talents interne.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HISTORY -->
+<section id="history" style="background:var(--white)">
+  <div class="container">
+    <div class="section-label"><span class="en">Our Story</span><span class="fr">Notre Histoire</span></div>
+    <h2 class="section-title"><span class="en">Brief History</span><span class="fr">Bref Historique</span></h2>
+    <p class="section-subtitle"><span class="en">EDUCFIX was born from a vision to restore the true value and structure of education — and has been building toward that goal since its founding.</span><span class="fr">EDUCFIX est né d'une vision visant à restaurer la vraie valeur de l'éducation — et œuvre vers cet objectif depuis sa fondation.</span></p>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot">21</div>
+        <div class="tl-body">
+          <div class="tl-year">December 2021</div>
+          <h4><span class="en">The Founding Vision</span><span class="fr">La Vision Fondatrice</span></h4>
+          <p><span class="en">The foundational concept for Innovation Forge was conceived. The seed of a bold educational mission was planted.</span><span class="fr">Le concept fondateur de l'Innovation Forge a été conçu. La graine d'une mission éducative audacieuse a été plantée.</span></p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">22</div>
+        <div class="tl-body">
+          <div class="tl-year">2022</div>
+          <h4><span class="en">Amethyst Tutorials</span><span class="fr">Amethyst Tutorials</span></h4>
+          <p><span class="en">EDUCFIX launched "Amethyst Tutorials," a valuable testing ground for pedagogical approaches. Though it concluded, its lessons shaped everything that followed.</span><span class="fr">EDUCFIX a lancé "Amethyst Tutorials", un terrain d'essai précieux pour les approches pédagogiques. Ses enseignements ont façonné tout ce qui a suivi.</span></p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--orange)">→</div>
+        <div class="tl-body">
+          <div class="tl-year"><span class="en">Building & Refining</span><span class="fr">Construction & Perfectionnement</span></div>
+          <h4><span class="en">Digital Skills Center Launch</span><span class="fr">Lancement du Centre de Compétences Numériques</span></h4>
+          <p><span class="en">Building upon lessons learned, EDUCFIX refined its curriculum. The Digital Skills Center became its inaugural program with further branches positioned to launch soon after.</span><span class="fr">S'appuyant sur les leçons apprises, EDUCFIX a affiné son programme. Le Centre de Compétences Numériques est devenu son programme inaugural.</span></p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--orange)">★</div>
+        <div class="tl-body">
+          <div class="tl-year"><span class="en">Today & Beyond</span><span class="fr">Aujourd'hui & Au-delà</span></div>
+          <h4><span class="en">EDUCFIX — Full Ecosystem in Motion</span><span class="fr">EDUCFIX — Écosystème Complet en Marche</span></h4>
+          <p><span class="en">Five branches, an ambitious goal of 10M+ certified leaders, and a clear mission to advance knowledge through research and the cultivation of future leaders across Africa and beyond.</span><span class="fr">Cinq branches, un objectif ambitieux de 10M+ de leaders certifiés, et une mission claire pour faire progresser les connaissances en Afrique et au-delà.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-label"><span class="en">Get In Touch</span><span class="fr">Nous Contacter</span></div>
+    <h2 class="section-title"><span class="en">Contact EDUCFIX</span><span class="fr">Contacter EDUCFIX</span></h2>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-item"><div class="contact-icon">✉️</div><div><h4>EMAIL</h4><a href="/cdn-cgi/l/email-protection#94e0f5f8ffe0fbf1f0e1f7f2fdecd4f3f9f5fdf8baf7fbf9"><span class="__cf_email__" data-cfemail="8cf8ede0e7f8e3e9e8f9efeae5f4ccebe1ede5e0a2efe3e1">[email&#160;protected]</span></a></div></div>
+        <div class="contact-item"><div class="contact-icon">📞</div><div><h4><span class="en">PHONE — BENIN REPUBLIC</span><span class="fr">TÉLÉPHONE — BÉNIN</span></h4><p>+229 01 40052711 &nbsp;|&nbsp; +229 01 42165755</p></div></div>
+        <div class="contact-item"><div class="contact-icon">📞</div><div><h4><span class="en">PHONE — NIGERIA</span><span class="fr">TÉLÉPHONE — NIGERIA</span></h4><p>+234 906 647 6770 &nbsp;|&nbsp; +234 816 848 9710<br/>+234 810 596 7311</p></div></div>
+        <h4 style="font-family:var(--font-head);letter-spacing:0.08em;color:rgba(255,255,255,0.4);font-size:0.78rem;margin-bottom:10px"><span class="en">SOCIAL MEDIA</span><span class="fr">RÉSEAUX SOCIAUX</span></h4>
+        <div class="contact-socials">
+          <a href="https://www.facebook.com/Educfix" target="_blank" class="social-btn" title="Facebook">FB</a>
+          <a href="https://www.instagram.com/Educfix" target="_blank" class="social-btn" title="Instagram">IG</a>
+          <a href="https://www.pinterest.com/Educfix" target="_blank" class="social-btn" title="Pinterest">PT</a>
+          <a href="https://wa.me/22940052711" target="_blank" class="social-btn" title="WhatsApp" style="background:#25D366;border-color:#25D366;font-size:1rem">💬</a>
+        </div>
+        <p style="font-size:0.78rem;color:rgba(255,255,255,0.4);margin-top:8px">@Educfix on Facebook, Instagram &amp; Pinterest</p>
+      </div>
+      <div>
+        <div class="contact-card">
+          <h3><span class="en">Ready to Start?</span><span class="fr">Prêt à Commencer ?</span></h3>
+          <p><span class="en">Reach out today to learn about enrollment, upcoming training dates, and which stage is right for you.</span><span class="fr">Contactez-nous aujourd'hui pour en savoir plus sur les inscriptions et les prochaines dates de formation.</span></p>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+              <a href="/cdn-cgi/l/email-protection#8cf8ede0e7f8e3e9e8f9efeae5f4ccebe1ede5e0a2efe3e1" class="btn btn-primary" style="width:100%;justify-content:center;background:var(--orange);border:none;padding:14px">
+                📧 <span class="en">Email Us on Gmail</span><span class="fr">Envoyez-nous un Email</span>
+              </a>
+              <a href="https://wa.me/22940052711" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center;background:#25D366;border:none;padding:14px">
+                💬 <span class="en">Chat on WhatsApp</span><span class="fr">Discuter sur WhatsApp</span>
+              </a>
+            </div>
+        </div>
+        <div class="contact-card">
+          <h3><span class="en">Explore Branches</span><span class="fr">Explorer les Branches</span></h3>
+          <div class="branch-item" onclick="document.getElementById('branches').scrollIntoView({behavior:'smooth'});setTimeout(()=>openModal('business'),600)"><span>EDUCFIX Business</span><span class="arrow"><span class="en">Learn ›</span><span class="fr">Voir ›</span></span></div>
+          <div class="branch-item" onclick="document.getElementById('branches').scrollIntoView({behavior:'smooth'});setTimeout(()=>openModal('education'),600)"><span><span class="en">Education</span><span class="fr">Éducation</span></span><span class="arrow"><span class="en">Learn ›</span><span class="fr">Voir ›</span></span></div>
+          <div class="branch-item" onclick="document.getElementById('branches').scrollIntoView({behavior:'smooth'});setTimeout(()=>openModal('forge'),600)"><span><span class="en">Innovation Forge</span><span class="fr">Innovation Forge</span></span><span class="arrow"><span class="en">Learn ›</span><span class="fr">Voir ›</span></span></div>
+          <div class="branch-item" onclick="document.getElementById('branches').scrollIntoView({behavior:'smooth'});setTimeout(()=>openModal('training'),600)"><span><span class="en">Training</span><span class="fr">Formation</span></span><span class="arrow"><span class="en">Learn ›</span><span class="fr">Voir ›</span></span></div>
+          <div class="branch-item" onclick="document.getElementById('branches').scrollIntoView({behavior:'smooth'});setTimeout(()=>openModal('tech'),600)"><span><span class="en">Computer / Tech</span><span class="fr">Informatique / Tech</span></span><span class="arrow"><span class="en">Learn ›</span><span class="fr">Voir ›</span></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-logo">EDUCFIX</div>
+    <p style="font-family:var(--font-head);letter-spacing:0.08em;font-size:0.78rem;color:rgba(255,255,255,0.3);margin-bottom:10px"><span class="en">EMPOWERING MINDS, TRANSFORMING FUTURES</span><span class="fr">DÉVELOPPER LES ESPRITS, TRANSFORMER LES AVENIRS</span></p>
+    <p>&copy; 2026 EDUCFIX. <span class="en">All rights reserved.</span><span class="fr">Tous droits réservés.</span> &nbsp;|&nbsp; <a href="/cdn-cgi/l/email-protection#f387929f98879c96978690959a8bb3949e929a9fdd909c9e"><span class="__cf_email__" data-cfemail="6317020f08170c06071600050a1b23040e020a0f4d000c0e">[email&#160;protected]</span></a></p>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+  <div class="modal" id="modalBox">
+    <div class="modal-header">
+      <div><div class="modal-title" id="modalTitle"></div><div class="modal-sub" id="modalSub"></div></div>
+      <button class="modal-close" onclick="closeModal()">&#x2715;</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+const modalData = {
+  education: {
+    en: {title:'Education Branch', sub:'Primary · Secondary · University', body:`
+      <div class="modal-section"><p>EDUCFIX's educational branch aims to revolutionize learning by creating a blended educational model. The vision is to establish a school system spanning primary to university levels.</p></div>
+      <div class="modal-section"><h4>Primary & Secondary</h4><p>Initially, primary and secondary education will be offered through a traditional, physical school setting — providing a strong foundation in core subjects and building the character, discipline, and creativity needed to succeed.</p></div>
+      <div class="modal-section"><h4>University Level</h4><p>At the university level, EDUCFIX will transition to a virtual learning environment, offering online degree programs and specialized courses accessible from anywhere.</p></div>
+      <div class="modal-section"><h4>The Vision</h4><p>The ultimate goal is to create a seamless and comprehensive educational pathway from primary school through university — equipping students with the knowledge and skills needed to succeed at every level of life.</p></div>
+    `},
+    fr: {title:'Branche Éducation', sub:'Primaire · Secondaire · Université', body:`
+      <div class="modal-section"><p>La branche éducative d'EDUCFIX vise à révolutionner l'apprentissage en créant un modèle éducatif mixte. La vision est d'établir un système scolaire allant du primaire à l'université.</p></div>
+      <div class="modal-section"><h4>Primaire & Secondaire</h4><p>Dans un premier temps, l'enseignement primaire et secondaire sera dispensé dans un cadre scolaire physique traditionnel — offrant une base solide dans les matières fondamentales.</p></div>
+      <div class="modal-section"><h4>Niveau Universitaire</h4><p>Au niveau universitaire, EDUCFIX passera à un environnement d'apprentissage virtuel, proposant des programmes de diplômes en ligne et des cours spécialisés accessibles de partout.</p></div>
+      <div class="modal-section"><h4>La Vision</h4><p>L'objectif ultime est de créer un parcours éducatif complet et fluide du primaire à l'université — dotant les étudiants des connaissances et compétences nécessaires pour réussir.</p></div>
+    `}
+  },
+  forge: {
+    en: {title:'Innovation Forge Programs', sub:'CreateHive · Mycelial Network · Millionaire Mind', body:`
+      <div class="stages-flow"><div class="stage-step active">CREATEHIVE</div><div class="stage-step">MYCELIAL NETWORK</div><div class="stage-step orange">MILLIONAIRE MIND</div><div class="stage-step">TEACHERS</div></div>
+      <div class="modal-section"><p>This branch focuses on developing specific skill sets and entrepreneurial mindsets through a progressive, three-stage program that transforms learners from skill students to business professionals and beyond.</p></div>
+      <div class="modal-section"><div class="stage-badge">Stage 1</div><h4>CREATEHIVE — Skill Education</h4><p>An online skill school with full academic structure. 4-month program: 2 months training + 2 months mentorship. Courses include Graphics Design, Digital Marketing, Programming, Leadership, and more.</p></div>
+      <div class="modal-section"><div class="stage-badge">Stage 2</div><h4>MYCELIAL NETWORK — Business Education</h4><p>For entrepreneurs and executives. Converts skills to profitable ventures. Requires completion of CreateHive (or valid proof of equivalent skills) and active or planned business ownership.</p></div>
+      <div class="modal-section"><div class="stage-badge">Stage 3</div><h4>MILLIONAIRE MIND — Mastery</h4><p>The elite final stage. Rigorous training on making real wealth from skills and business. Requires professional-level mastery and active business ownership.</p></div>
+      <div class="modal-section"><h4>Note</h4><p>Finishing all levels is not mandatory. Joining at any level is possible with specific considerations. Those who complete all four educational levels are retained as teachers, staff, and partners of EDUCFIX.</p></div>
+    `},
+    fr: {title:'Programmes Innovation Forge', sub:'CreateHive · Réseau Mycélien · Millionaire Mind', body:`
+      <div class="stages-flow"><div class="stage-step active">CREATEHIVE</div><div class="stage-step">MYCELIAL NETWORK</div><div class="stage-step orange">MILLIONAIRE MIND</div><div class="stage-step">ENSEIGNANTS</div></div>
+      <div class="modal-section"><p>Cette branche se concentre sur le développement de compétences spécifiques et de mentalités entrepreneuriales à travers un programme progressif en trois étapes.</p></div>
+      <div class="modal-section"><div class="stage-badge">Étape 1</div><h4>CREATEHIVE — Éducation aux Compétences</h4><p>Une école de compétences en ligne avec une structure académique complète. Programme de 4 mois : 2 mois de formation + 2 mois de mentorat.</p></div>
+      <div class="modal-section"><div class="stage-badge">Étape 2</div><h4>MYCELIAL NETWORK — Éducation Commerciale</h4><p>Pour entrepreneurs et dirigeants. Convertit les compétences en entreprises rentables. Nécessite la complétion de CreateHive et la possession ou planification d'une entreprise.</p></div>
+      <div class="modal-section"><div class="stage-badge">Étape 3</div><h4>MILLIONAIRE MIND — Maîtrise</h4><p>L'étape finale d'élite. Formation rigoureuse pour transformer les compétences et l'éducation commerciale en richesse réelle.</p></div>
+    `}
+  },
+  training: {
+    en: {title:'Training Branch', sub:'Building Teachers · AI & Robotics · Leadership', body:`
+      <div class="modal-section"><p>This branch is dedicated to developing educators and leaders through specialized training programs — preparing them to lead classrooms and organizations in the 21st century.</p></div>
+      <div class="modal-section"><h4>Building Teachers & Leaders</h4><p>Developing effective educators and leaders through specialized training programs focused on pedagogical skills, leadership development, and community engagement. Empowering them to create lasting impact in their spheres of influence.</p></div>
+      <div class="modal-section"><h4>AI & Robotics in Education</h4><p>Empowering African educators to effectively utilize AI and robotics in the classroom through comprehensive training programs covering curriculum integration, practical applications, and ethical considerations. This is a particularly prescient branch — preparing educators for the tech-driven future of learning.</p></div>
+      <div class="modal-section"><h4>Why This Matters</h4><p>EDUCFIX is not just teaching current technology — it is preparing the next generation of educators for the tech-driven future, which is a unique and deeply impactful niche. The onsite/offline nature of this branch emphasizes practical, hands-on implementation.</p></div>
+    `},
+    fr: {title:'Branche Formation', sub:'Former les Enseignants · IA & Robotique · Leadership', body:`
+      <div class="modal-section"><p>Cette branche est dédiée au développement des éducateurs et des leaders par des programmes de formation spécialisés.</p></div>
+      <div class="modal-section"><h4>Former les Enseignants & Leaders</h4><p>Développer des éducateurs et des leaders efficaces à travers des programmes spécialisés axés sur les compétences pédagogiques, le développement du leadership et l'engagement communautaire.</p></div>
+      <div class="modal-section"><h4>IA & Robotique en Éducation</h4><p>Permettre aux éducateurs africains d'utiliser efficacement l'IA et la robotique dans les salles de classe, grâce à des programmes couvrant l'intégration des programmes, les applications pratiques et les considérations éthiques.</p></div>
+      <div class="modal-section"><h4>Pourquoi C'est Important</h4><p>EDUCFIX ne se contente pas d'enseigner la technologie actuelle — il prépare la prochaine génération d'éducateurs pour l'avenir, positionnant EDUCFIX à l'avant-garde de l'innovation éducative.</p></div>
+    `}
+  },
+  tech: {
+    en: {title:'Computer / Tech Branch', sub:'Digital Skills Center — Benin Republic', body:`
+      <div class="modal-section"><p>EDUCFIX's Computer/Tech branch runs the <strong>Digital Skills Center</strong> in Benin Republic — a tiered training program bringing practical digital literacy to students and professionals at every level.</p></div>
+      <div class="modal-section"><h4>About the Digital Skills Center</h4><p>The Digital Skills Center bridges the gap between traditional education and the digital world. It offers structured, hands-on computer and tech training across three progressive levels — from complete beginners to advanced specialists. All certified trainees are also eligible to provide internal IT support for EDUCFIX operations.</p></div>
+      <div class="modal-section"><div class="stage-badge">Level 1</div><h4>Digital Essentials — Les Digital Basics</h4><p>The foundation level. Students learn computer basics, operating systems, file management, essential software (word processing, spreadsheets, presentations), internet safety, online research skills, and responsible digital citizenship. Basic coding concepts are introduced through visual tools like Scratch. Perfect for beginners with little or no prior computer experience.</p></div>
+      <div class="modal-section"><div class="stage-badge">Level 2</div><h4>Digital Proficiency — Pro Numérique</h4><p>Covers advanced word processing, spreadsheets, presentation software, graphic design, multimedia creation, web design basics (HTML and CSS), Python or JavaScript coding, and digital marketing fundamentals. Ideal for those with basic computer knowledge who want to go deeper.</p></div>
+      <div class="modal-section"><div class="stage-badge">Level 3</div><h4>Specialized Digital Skills — Digital Maître</h4><p>Advanced level offered as projects or specialized workshops. Topics include advanced graphic design, video editing, mobile and web app development, data analysis and visualization, cybersecurity fundamentals, and Adobe Creative Suite training. Tailored to community demand and instructor expertise.</p></div>
+      <div class="modal-section"><h4>Internal Tech Support</h4><p>Certified trainees provide efficient, cost-effective IT support within EDUCFIX — ensuring smooth operations and continuous technological advancement from within the organization.</p></div>
+      <div class="modal-section"><h4>Who Is This For?</h4><ul><li>Complete beginners wanting foundational computer skills (Level 1)</li><li>Intermediate users looking to upskill in design, coding or digital marketing (Level 2)</li><li>Advanced learners seeking specialized professional skills (Level 3)</li><li>Educators and professionals wanting to integrate tech into their work</li></ul></div>
+      <div class="modal-section"><h4>Contact</h4><p>+229 01 40 05 27 11 &nbsp;|&nbsp; talktoeducfix@gmail.com</p></div>
+    `},
+    fr: {title:'Branche Informatique / Tech', sub:'Centre de Compétences Numériques — Bénin', body:`
+      <div class="modal-section"><p>La branche Informatique/Tech d'EDUCFIX gère le <strong>Centre de Compétences Numériques</strong> au Bénin — un programme de formation à niveaux conçu pour apporter une culture numérique pratique aux étudiants et professionnels de tous niveaux.</p></div>
+      <div class="modal-section"><h4>À propos du Centre</h4><p>Le Centre comble le fossé entre l'éducation traditionnelle et le monde numérique. Il propose une formation informatique structurée sur trois niveaux progressifs — des débutants complets aux spécialistes avancés.</p></div>
+      <div class="modal-section"><div class="stage-badge">Niveau 1</div><h4>Les Digital Basics</h4><p>Le niveau fondamental. Bases de l'informatique, systèmes d'exploitation, logiciels essentiels, sécurité en ligne, citoyenneté numérique et introduction au codage avec Scratch.</p></div>
+      <div class="modal-section"><div class="stage-badge">Niveau 2</div><h4>Pro Numérique</h4><p>Niveau intermédiaire : traitement de texte avancé, tableurs, design graphique, HTML et CSS, Python ou JavaScript, et fondamentaux du marketing digital.</p></div>
+      <div class="modal-section"><div class="stage-badge">Niveau 3</div><h4>Digital Maître</h4><p>Niveau avancé en ateliers spécialisés : design avancé, montage vidéo, développement d'applications, analyse de données, cybiersécurité et suite Adobe Creative.</p></div>
+      <div class="modal-section"><h4>Support Informatique Interne</h4><p>Les stagiaires certifiés fournissent un support informatique efficace au sein d'EDUCFIX — créant un vivier de talents autosuffisant.</p></div>
+      <div class="modal-section"><h4>Contact</h4><p>+229 01 40 05 27 11 &nbsp;|&nbsp; talktoeducfix@gmail.com</p></div>
+    `}
+  },
+  createhive: {
+    en: {title:'CREATEHIVE', sub:'Stage 1 — Skill Education', body:`
+      <div class="modal-section"><p>CREATEHIVE combines "Creativity" and "Hive Mind" — the generation of novel ideas backed by collective intelligence formed through the interconnectedness of individuals within a group.</p></div>
+      <div class="modal-section"><h4>Aims & Objectives</h4><ul><li>Train and build leaders in the areas of skills</li><li>Ensure interconnectedness of individuals in the same niche</li><li>Generate novel ideas in solving practical real-world issues</li><li>Create a world where skills are recognized as important</li><li>Create a medium where ideas can be tested and iterated through collective feedback</li></ul></div>
+      <div class="modal-section"><h4>Structure</h4><ul><li>Online skill school with full academic structure</li><li>Classrooms, curriculum, admissions, matric numbers, certificates</li><li>Assignments, exams, expulsion and promotion policies</li><li>4-month program: 2 months learning + 2 months mentorship</li><li>Minimum 3 days/week training on Telegram</li><li>Lectures of at least 1hr 30min each</li><li>3 intakes per year</li></ul></div>
+      <div class="modal-section"><h4>Fees</h4>
+        <div class="fee-row"><span>Registration</span><span>₦1,000</span></div>
+        <div class="fee-row"><span>Admission</span><span>₦1,000</span></div>
+        <div class="fee-row"><span>Materials</span><span>₦1,500</span></div>
+        <div class="fee-row"><span>Examination</span><span>₦500</span></div>
+        <div class="fee-row"><span>Certificate</span><span>₦2,000</span></div>
+        <div class="fee-row"><span><strong>TOTAL</strong></span><span>₦6,000</span></div>
+      </div>
+      <div class="modal-section"><h4>Eligibility for Volunteer Trainers</h4><ul><li>Must provide CV or Resume</li><li>Must be professionals with working experience</li><li>Must be able to teach effectively</li></ul></div>
+    `},
+    fr: {title:'CREATEHIVE', sub:'Étape 1 — Éducation aux Compétences', body:`
+      <div class="modal-section"><p>CREATEHIVE combine "Créativité" et "Hive Mind" — la génération d'idées nouvelles soutenue par l'intelligence collective formée par l'interconnexion d'individus au sein d'un groupe.</p></div>
+      <div class="modal-section"><h4>Objectifs</h4><ul><li>Former et développer des leaders dans les domaines des compétences</li><li>Assurer l'interconnexion des individus de la même niche</li><li>Générer des idées nouvelles pour résoudre des problèmes pratiques</li><li>Créer un monde où les compétences sont reconnues comme importantes</li></ul></div>
+      <div class="modal-section"><h4>Structure</h4><ul><li>École de compétences en ligne avec structure académique complète</li><li>Salles de classe, curricula, admissions, numéros de matricule, certificats</li><li>Programme de 4 mois : 2 mois d'apprentissage + 2 mois de mentorat</li><li>Minimum 3 jours/semaine sur Telegram • 3 rentrées par an</li></ul></div>
+      <div class="modal-section"><h4>Frais</h4>
+        <div class="fee-row"><span>Inscription</span><span>₦1,000</span></div>
+        <div class="fee-row"><span>Admission</span><span>₦1,000</span></div>
+        <div class="fee-row"><span>Matériaux</span><span>₦1,500</span></div>
+        <div class="fee-row"><span>Examen</span><span>₦500</span></div>
+        <div class="fee-row"><span>Certificat</span><span>₦2,000</span></div>
+        <div class="fee-row"><span><strong>TOTAL</strong></span><span>₦6,000</span></div>
+      </div>
+    `}
+  },
+  mycelial: {
+    en: {title:'MYCELIAL NETWORK', sub:'Stage 2 — Business Education', body:`
+      <div class="modal-section"><p>MYCELIAL NETWORK is a powerful metaphor for interconnectedness and collaboration — reminding us that everything is connected, and the health of one organism influences the health of others. This stage fosters a collaborative environment where students, faculty, industry, and community work together.</p></div>
+      <div class="modal-section"><h4>Target Audience</h4><ul><li>Entrepreneurs (primary) and executives</li><li>Individuals looking to build a community and produce impactful leadership</li></ul></div>
+      <div class="modal-section"><h4>Aims & Objectives</h4><ul><li>Train and build leaders in the areas of business</li><li>Provide open access to knowledge, research and data</li><li>Convert skills to yield great fortune and income through successful business</li><li>Create a medium where ideas can be tested through collective feedback</li></ul></div>
+      <div class="modal-section"><h4>Eligibility</h4><ul><li>Must have a skill and working experience (master level)</li><li>Must own a business or have one in mind</li><li>Must have completed CreateHive (or provide valid proof of equivalent skills)</li><li>A growth mindset and positive interpersonal relationship</li></ul></div>
+      <div class="modal-section"><h4>Fees</h4>
+        <div class="fee-row"><span>School Fees</span><span>₦15,000</span></div>
+        <div class="fee-row"><span>Registration</span><span>₦2,000</span></div>
+        <div class="fee-row"><span>Admission</span><span>₦1,000</span></div>
+        <div class="fee-row"><span>Identity Card</span><span>₦2,000</span></div>
+        <div class="fee-row"><span>Materials</span><span>₦4,000</span></div>
+        <div class="fee-row"><span>Project</span><span>₦1,000</span></div>
+        <div class="fee-row"><span>Certificate</span><span>₦5,000</span></div>
+        <div class="fee-row"><span><strong>TOTAL</strong></span><span>₦30,000</span></div>
+      </div>
+    `},
+    fr: {title:'MYCELIAL NETWORK', sub:'Étape 2 — Éducation Commerciale', body:`
+      <div class="modal-section"><p>MYCELIAL NETWORK est une puissante métaphore de l'interconnexion et de la collaboration — rappelant que tout est connecté, et que la santé d'un organisme influence celle des autres.</p></div>
+      <div class="modal-section"><h4>Public Cible</h4><ul><li>Entrepreneurs (principaux) et dirigeants</li><li>Individus souhaitant construire une communauté et produire un leadership impactant</li></ul></div>
+      <div class="modal-section"><h4>Éligibilité</h4><ul><li>Doit avoir une compétence et une expérience professionnelle (niveau master)</li><li>Doit posséder ou envisager une entreprise</li><li>Doit avoir complété CreateHive ou fournir une preuve équivalente</li><li>Un état d'esprit de croissance et des relations interpersonnelles positives</li></ul></div>
+      <div class="modal-section"><h4>Frais</h4>
+        <div class="fee-row"><span>Frais Scolaires</span><span>₦15,000</span></div>
+        <div class="fee-row"><span>Inscription</span><span>₦2,000</span></div>
+        <div class="fee-row"><span>Admission + Carte</span><span>₦3,000</span></div>
+        <div class="fee-row"><span>Matériaux + Projet</span><span>₦5,000</span></div>
+        <div class="fee-row"><span>Certificat</span><span>₦5,000</span></div>
+        <div class="fee-row"><span><strong>TOTAL</strong></span><span>₦30,000</span></div>
+      </div>
+    `}
+  },
+  business: {
+    en: {title:'EDUCFIX Business', sub:'Branch 5 — Digital Solutions for Entrepreneurs', body:`
+      <div class="modal-section"><p>EDUCFIX Business helps entrepreneurs and local business owners transform their physical shops into modern, profitable, digitally-powered enterprises — with practical, affordable solutions tailored to the Benin Republic market.</p></div>
+      <div class="modal-section"><div class="stage-badge">Pack 1</div><h4>Pack Visibilité — 5,000 FCFA <span style="text-decoration:line-through;font-weight:400;font-size:0.85rem;color:var(--text-muted)">10,000 FCFA</span></h4><ul><li><strong>Google Maps Installation:</strong> Get your shop listed so customers find you with a single search</li><li><strong>WhatsApp Business + Catalogue:</strong> Full professional setup with a product catalogue for easy ordering</li></ul><p style="font-style:italic;color:var(--orange);margin-top:8px;font-size:0.85rem">Result: Clients find you in one click.</p></div>
+      <div class="modal-section"><div class="stage-badge">Pack 2</div><h4>Pack Design Professionnel — PROMO</h4><ul><li><strong>Logo Creation:</strong> 10,000 FCFA (was 20,000 FCFA)</li><li><strong>5 Advertising Posters / month:</strong> 12,000 FCFA/month (was 24,000 FCFA/month) — professional visuals for your social media</li></ul><p style="font-style:italic;color:var(--orange);margin-top:8px;font-size:0.85rem">Result: A brand image that attracts VIP clients.</p></div>
+      <div class="modal-section"><div class="stage-badge">Pack 3</div><h4>Stock Management & Digitalisation — From 25,000 FCFA</h4><ul><li><strong>Notebooks → Excel:</strong> Transform hand-written account books into clear digital spreadsheets</li><li><strong>Quick Training:</strong> Learn to track profits and manage inventory from your phone</li></ul><p style="font-style:italic;color:var(--orange);margin-top:8px;font-size:0.85rem">Result: Zero errors, more clarity.</p></div>
+      <div class="modal-section"><div class="stage-badge">Pack 4</div><h4>Digital Skills for Entrepreneurs</h4><p>Practical training in digital tools, social media management, online ordering, and customer engagement — designed for local business owners who want to grow without complexity.</p></div>
+      <div class="modal-section"><h4>Contact</h4><p>+229 01 40 05 27 11 &nbsp;|&nbsp; +229 01 42 16 57 55<br/>talktoeducfix@gmail.com &nbsp;|&nbsp; @Educfix on Instagram, Facebook & Pinterest</p></div>
+    `},
+    fr: {title:'EDUCFIX Business', sub:'Branche 5 — Solutions Numériques pour Entrepreneurs', body:`
+      <div class="modal-section"><p>EDUCFIX Business aide les entrepreneurs et commerçants locaux à transformer leurs boutiques physiques en entreprises modernes, rentables et numériquement puissantes — avec des solutions pratiques et abordables adaptées au marché béninois.</p></div>
+      <div class="modal-section"><div class="stage-badge">Pack 1</div><h4>Pack Visibilité — 5.000 FCFA <span style="text-decoration:line-through;font-weight:400;font-size:0.85rem;color:var(--text-muted)">10.000 FCFA</span></h4><ul><li><strong>Installation sur Google Maps :</strong> Référencez votre boutique pour être trouvé facilement</li><li><strong>Configuration WhatsApp Business + Catalogue :</strong> Installation professionnelle complète avec catalogue produits</li></ul><p style="font-style:italic;color:var(--orange);margin-top:8px;font-size:0.85rem">Résultat : Les clients vous trouvent en un clic.</p></div>
+      <div class="modal-section"><div class="stage-badge">Pack 2</div><h4>Pack Design Professionnel — PROMO</h4><ul><li><strong>Création de Logo :</strong> 10.000 FCFA (au lieu de 20.000 FCFA)</li><li><strong>5 Affiches Publicitaires / mois :</strong> 12.000 FCFA/mois (au lieu de 24.000 FCFA/mois)</li></ul><p style="font-style:italic;color:var(--orange);margin-top:8px;font-size:0.85rem">Résultat : Une image de marque qui attire les clients VIP.</p></div>
+      <div class="modal-section"><div class="stage-badge">Pack 3</div><h4>Gestion de Stock & Digitalisation — À partir de 25.000 FCFA</h4><ul><li><strong>Cahiers → Excel :</strong> Transformation de vos cahiers de comptes en fichiers Excel clairs</li><li><strong>Formation Rapide :</strong> Suivez vos profits sur votre téléphone</li></ul><p style="font-style:italic;color:var(--orange);margin-top:8px;font-size:0.85rem">Résultat : Zéro erreur, plus de clarté.</p></div>
+      <div class="modal-section"><div class="stage-badge">Pack 4</div><h4>Compétences Numériques pour Entrepreneurs</h4><p>Formation pratique aux outils numériques, réseaux sociaux, commandes en ligne et engagement client — conçue pour les commerçants locaux.</p></div>
+      <div class="modal-section"><h4>Contact</h4><p>+229 01 40 05 27 11 &nbsp;|&nbsp; +229 01 42 16 57 55<br/>talktoeducfix@gmail.com &nbsp;|&nbsp; @Educfix sur Instagram, Facebook & Pinterest</p></div>
+    `}
+  },
+  millionaire: {
+    en: {title:'MILLIONAIRE MIND', sub:'Stage 3 — Elite Mastery', body:`
+      <div class="modal-section"><p>This is the last stage in the EDUCFIX skill acquisition cycle. It is where rigorous training takes place on how to make real, lasting wealth with the foundation built through skill and business education.</p></div>
+      <div class="modal-section"><h4>Eligibility</h4><ul><li>Must have a skill and working experience at a professional level</li><li>Must be ready and committed to learn</li><li>Must be the owner of an active business</li><li>Must have completed CreateHive or Mycelial Network (valid proof required otherwise)</li><li>A growth mindset and positive interpersonal relationship</li><li>No laziness — full commitment required</li></ul></div>
+      <div class="modal-section"><h4>Fee</h4><div class="fee-row"><span><strong>Total Fee</strong></span><span>₦100,000</span></div><p style="margin-top:10px;font-size:0.85rem;color:var(--text-muted)">Full breakdown provided in the admission letter. Installment payment plans available.</p></div>
+      <div class="modal-section"><h4>What Comes After</h4><p>Those who complete all four educational levels of EDUCFIX are retained as teachers, staff, and partners of the organization — becoming an integral part of the mission to certify 10M+ leaders worldwide.</p></div>
+    `},
+    fr: {title:'MILLIONAIRE MIND', sub:'Étape 3 — Maîtrise d\'Élite', body:`
+      <div class="modal-section"><p>C'est la dernière étape du cycle d'acquisition de compétences EDUCFIX. C'est là qu'une formation rigoureuse a lieu pour apprendre à créer une richesse réelle et durable avec les bases construites lors des étapes précédentes.</p></div>
+      <div class="modal-section"><h4>Éligibilité</h4><ul><li>Doit avoir une compétence et une expérience professionnelle (niveau professionnel)</li><li>Doit être propriétaire d'une entreprise active</li><li>Doit avoir complété CreateHive ou Mycelial Network</li><li>Un état d'esprit de croissance et des relations interpersonnelles positives</li><li>Aucune paresse — engagement total requis</li></ul></div>
+      <div class="modal-section"><h4>Frais</h4><div class="fee-row"><span><strong>Total</strong></span><span>₦100,000</span></div></div>
+      <div class="modal-section"><h4>Ce qui Vient Après</h4><p>Ceux qui complètent les quatre niveaux éducatifs d'EDUCFIX sont retenus comme enseignants, personnel et partenaires de l'organisation.</p></div>
+    `}
+  }
+};
+
+function setLang(lang) {
+  document.body.className = 'lang-' + lang;
+  ['EN','FR','ENm','FRm'].forEach(function(id) {
+    var btn = document.getElementById('btn' + id);
+    if (btn) btn.classList.toggle('active', id.toLowerCase().startsWith(lang));
+  });
+}
+
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+window.addEventListener('scroll', function() {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+});
+
+function openModal(key) {
+  var lang = document.body.classList.contains('lang-fr') ? 'fr' : 'en';
+  var d = modalData[key];
+  if (!d) return;
+  var data = d[lang] || d['en'];
+  document.getElementById('modalTitle').textContent = data.title;
+  document.getElementById('modalSub').textContent = data.sub;
+  document.getElementById('modalBody').innerHTML = data.body;
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function closeModalOutside(e) {
+  if (e.target === document.getElementById('modalOverlay')) closeModal();
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
+
+document.querySelectorAll('.cycle-node').forEach(function(n, i) {
+  n.addEventListener('mouseenter', function() {
+    document.querySelectorAll('.cycle-node').forEach(function(x, j) {
+      x.classList.toggle('highlight', j <= i);
+    });
+  });
+  n.addEventListener('mouseleave', function() {
+    document.querySelectorAll('.cycle-node').forEach(function(x, j) {
+      x.classList.toggle('highlight', j === 0);
+    });
+  });
+});
+</script>
+</body>
+</html>
